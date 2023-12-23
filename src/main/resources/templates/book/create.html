@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>책 등록</title>
+  <!-- Bootstrap CSS 추가 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2 class="mb-4">책 등록</h2>
+  <form action="/books/create" method="post">
+    <div class="form-group">
+      <label for="title">제목:</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="subtitle">부제목:</label>
+      <input type="text" class="form-control" id="subtitle" name="subtitle" required>
+    </div>
+    <div class="form-group">
+      <label for="publicationDate">출판일:</label>
+      <input type="date" class="form-control" id="publicationDate" name="publicationDate" required>
+    </div>
+    <div class="form-group">
+      <label for="subject">주제:</label>
+      <input type="text" class="form-control" id="subject" name="subject" required>
+    </div>
+    <div class="form-group">
+      <label for="publisher">출판사:</label>
+      <input type="text" class="form-control" id="publisher" name="publisher" required>
+    </div>
+    <div class="form-group">
+      <label for="pageCount">페이지 수:</label>
+      <input type="number" class="form-control" id="pageCount" name="pageCount" required>
+    </div>
+    <button type="submit" class="btn btn-primary">책 등록</button>
+  </form>
+</div>
+
+<!-- Bootstrap JS 및 Popper.js 추가 (필요한 경우) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

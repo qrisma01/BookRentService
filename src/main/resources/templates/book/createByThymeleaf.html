@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>책 등록</title>
+</head>
+<body>
+
+<h2>책 등록</h2>
+<form th:action="@{/books/create}" th:object="${book}" method="post">
+  <label>제목: <input type="text" th:field="*{title}" /></label><br/>
+  <label>부제목: <input type="text" th:field="*{subtitle}" /></label><br/>
+  <label>출판일: <input type="date" th:field="*{publicationDate}" /></label><br/>
+  <label>주제: <input type="text" th:field="*{subject}" /></label><br/>
+  <label>출판사: <input type="text" th:field="*{publisher}" /></label><br/>
+  <label>페이지 수: <input type="number" th:field="*{pageCount}" /></label><br/>
+  <input type="submit" value="책 등록" />
+</form>
+</body>
+</html>
